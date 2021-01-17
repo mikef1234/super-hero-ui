@@ -21,9 +21,9 @@ jobs:
           steps:
             - run: sudo apt-get update && sudo apt-get install python-pip python-dev build-essential
             - run: sudo pip install awscli
-            - run: aws configure set aws_access_key_id AKIAT2YCFRSUMGCS7SV5 --profile superhero-deploy
-            - run: aws configure set aws_secret_access_key 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 --profile superhero-deploy
-            - run: aws configure set region US-EAST-1 --profile superhero-deploy
+            - run: aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID --profile superhero-deploy
+            - run: aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY --profile superhero-deploy
+            - run: aws configure set region $AWS_DEFAULT_REGION --profile superhero-deploy
 
             - run: npm install
             - run: npm run deploy
