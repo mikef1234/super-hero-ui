@@ -26,3 +26,10 @@ workflows:
     build-and-test:
       jobs:
         - build-and-test
+    deploy-master:
+      jobs:
+        - deploy
+          filters:
+            branches:
+              only:
+                - master
