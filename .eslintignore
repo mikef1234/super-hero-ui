@@ -1,0 +1,6 @@
+# Ignore public files
+public
+
+# Ignore Webpack
+webpack.dev.js
+webpack.prod.js
